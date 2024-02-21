@@ -1,11 +1,15 @@
 <div class="text-white">
-    <!-- standard binding -->
-    <div [class]="getClasses(1)">
+    <div class="p-2" [ngClass]="getClassMap(1)">
         The first product is {{model.getProduct(1)?.name}}.
     </div>
-    <!-- special class binding -->
-    <div class="p-2" [class.bg-success]="(model.getProduct(2)?.price ?? 0) < 50"
-        [class.bg-info]="(model.getProduct(2)?.price ?? 0) >= 50">
-        The second product is {{model.getProduct(2)?.name}}
+    <div class="p-2" [ngClass]="getClassMap(2)">
+        The second product is {{model.getProduct(2)?.name}}.
+    </div>
+    <!-- alternative approach -->
+    <div class="p-2" [ngClass]="{
+    'bg-success': (model.getProduct(3)?.price ?? 0) < 50,
+    'bg-info': (model.getProduct(3)?.price ?? 0) >= 50
+    }">
+        The third product is {{model.getProduct(3)?.name}}
     </div>
 </div>
