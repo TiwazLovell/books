@@ -20,4 +20,7 @@ export class ProductComponent {
             "bg-info": (product?.price ?? 0) < 50
         };
     }
+
+    fontSizeWithUnits: string = "30px";
+    fontSizeWithoutUnits: string ="30";
 }
