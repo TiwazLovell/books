@@ -5,11 +5,13 @@
     <div class="p-1">
         <table class="table table-sm table-bordered text-dark">
             <tr>
+                <th></th>
                 <th>Name</th>
                 <th>Category</th>
                 <th>Price</th>
             </tr>
-            <tr *ngFor="let item of getProducts()">
+            <tr *ngFor="let item of getProducts(); let i = index; let c = count">
+                <td>{{ i + 1 }} of {{ c }}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.category}}</td>
                 <td>{{item.price}}</td>
