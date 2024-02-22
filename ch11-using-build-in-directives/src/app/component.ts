@@ -23,6 +23,7 @@ export class ProductComponent {
     }
 
     getProducts(): Product[] {
+        console.log("getProducts invoked");
         return this.model.getProducts();
     }
 
@@ -35,4 +36,6 @@ export class ProductComponent {
     getKey(index: number, product: Product) {
         return product.id;
     }
+
+    counter: number = 1;
 }
