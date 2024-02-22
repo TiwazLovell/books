@@ -18,11 +18,6 @@ export class ProductComponent {
         return this.model.getProducts()[position];
     }
 
-    // getClassesByPosition(position: number): string {
-    //     let product = this.getProductByPosition(position);
-    //     return "p-2 " + ((product?.price ?? 0) < 50 ? "bg-info" : "bg-warning");
-    // }
-
     getProduct(key: number): Product | undefined {
         return this.model.getProduct(key);
     }
@@ -34,7 +29,10 @@ export class ProductComponent {
     getProductCount(): number {
         return this.getProducts().length;
     }
-    
+
     targetName: string = "Kayak";
 
+    getKey(index: number, product: Product) {
+        return product.id;
+    }
 }
