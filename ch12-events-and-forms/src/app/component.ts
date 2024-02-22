@@ -18,4 +18,8 @@ export class ProductComponent {
     }
 
     selectedProduct: string | undefined;
+
+    getSelected(product: Product): boolean {
+        return product.name == this.selectedProduct;
+    }
 }
