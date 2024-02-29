@@ -17,15 +17,15 @@ export class ProductComponent {
         return this.model.getProducts();
     }
 
-    selectedProduct: string | undefined;
+    // store the data entered into the form by the user
+    newProduct: Product = new Product();
 
-    getSelected(product: Product): boolean {
-        return product.name == this.selectedProduct;
+    // a getter that returns a JSON representation of the newProduct property
+    get jsonProduct() {
+        return JSON.stringify(this.newProduct);
     }
 
-    handleInputEvent(ev: Event) {
-        if (ev.target instanceof HTMLInputElement) {
-            this.selectedProduct = ev.target.value
-        }
+    addProduct(p: Product) {
+        console.log("New Product: " + this.jsonProduct);
     }
 }
