@@ -1,7 +1,7 @@
 import { ApplicationRef, Component } from "@angular/core";
 import { Model } from "./repository.mode";
 import { Product } from "./product.model";
-import { NgModel, ValidationErrors } from "@angular/forms";
+import { NgModel, ValidationErrors, NgForm } from "@angular/forms";
 
 @Component({
     selector: "app",
@@ -54,5 +54,17 @@ export class ProductComponent {
     getValidationMessages(state: NgModel, thingName?: string) {
         let thing: string = state.path?.[0] ?? thingName;
         return this.getMessages(state.errors, thing)
+    }
+
+    formSubmitted: boolean = false;
+
+    submitForm(form: NgForm) {
+        this.formSubmitted = true;
+        if (form.valid) {
+            this.addProduct(this.newProduct);
+            this.newProduct = new Product();
+            form.resetForm();
+            this.formSubmitted = false;
+        }
     }
 }
