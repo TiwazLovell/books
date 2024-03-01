@@ -4,9 +4,12 @@ import {
 } from "@angular/core";
 
 @Directive({
-    selector: "input[paModel]"
+    selector: "input[paModel]",
+    exportAs: "paModel"
 })
 export class PaModel {
+
+    direction: string = "None";
 
     @Input("paModel")
     modelProperty: string | undefined = "";
@@ -18,6 +21,7 @@ export class PaModel {
         let change = changes["modelProperty"];
         if (change.currentValue != this.fieldValue) {
             this.fieldValue = changes["modelProperty"].currentValue || "";
+            this.direction = "Model";
         }
     }
 
@@ -28,5 +32,6 @@ export class PaModel {
     updateValue(newValue: string) {
         this.fieldValue = newValue;
         this.update.emit(newValue);
+        this.direction = "Element";
     }
 }
