@@ -1,11 +1,27 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Model } from "./repository.mode";
+import { Product } from "./product.model";
 
 @Component({
     selector: "paProductTable",
-    // template: `<div class="bg-info p-2">
-    //                 This is an external template
-    //             </div>`
     templateUrl: "productTable.component.html"
 })
 export class ProductTableComponent {
+
+    @Input("model")
+    dataModel: Model | undefined;
+
+    getProduct(key: number): Product | undefined {
+        return this.dataModel?.getProduct(key);
+    }
+
+    getProducts(): Product[] | undefined {
+        return this.dataModel?.getProducts();
+    }
+
+    deleteProduct(key: number) {
+        this.dataModel?.deleteProduct(key);
+    }
+    
+    showTable: boolean = true;
 }
