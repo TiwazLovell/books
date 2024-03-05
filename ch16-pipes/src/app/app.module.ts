@@ -39,7 +39,6 @@ registerLocaleData(localeFr);
     BrowserModule,
     FormsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
   bootstrap: [ProductComponent]
 })
 export class AppModule { }
