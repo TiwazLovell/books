@@ -1,6 +1,7 @@
 import { Component, Input, QueryList, ViewChildren } from "@angular/core";
 import { Model } from "./repository.mode";
 import { Product } from "./product.model";
+import { Subject } from "rxjs";
 
 @Component({
     selector: "paProductTable",
@@ -37,5 +38,13 @@ export class ProductTableComponent {
         "=1": "one product",
         "=2": "two products",
         "other": "# products"
+    }
+
+    numbers: Subject<number> = new Subject<number>();
+    ngOnInit() {
+        let counter = 100;
+        setInterval(() => {
+            this.numbers.next(counter += 10)
+        }, 1000);
     }
 }
