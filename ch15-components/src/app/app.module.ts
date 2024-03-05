@@ -13,7 +13,6 @@ import { ProductTableComponent } from './productTable.component';
 import { ProductFormComponent } from './productForm.component';
 import { PaToggleView } from './toggleView.component';
 
-
 @NgModule({
   declarations: [
     ProductComponent,
