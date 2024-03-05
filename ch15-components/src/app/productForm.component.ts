@@ -1,11 +1,11 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter, ViewEncapsulation } from "@angular/core";
 import { Product } from "./product.model";
 
 @Component({
-    selector: "paProductForm",
+    selector: "pa-productform",
     templateUrl: "productForm.component.html",
-    // styles: ["div {background-color: lightgreen}"]
-    styleUrls: ["productForm.component.css"]
+    styleUrls: ["productForm.component.css"],
+    encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ProductFormComponent {
 
