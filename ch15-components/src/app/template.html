@@ -3,8 +3,8 @@
         <div class="col-4 p-2 text-dark">
             <paProductForm (paNewProduct)="addProduct($event)"></paProductForm>
         </div>
-        <div class="col p-2">
+        <paToggleView>
             <paProductTable [model]="model"></paProductTable>
-        </div>
+        </paToggleView>
     </div>
 </div>

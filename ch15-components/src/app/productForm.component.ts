@@ -3,12 +3,14 @@ import { Product } from "./product.model";
 
 @Component({
     selector: "paProductForm",
-    templateUrl: "productForm.component.html"
+    templateUrl: "productForm.component.html",
+    // styles: ["div {background-color: lightgreen}"]
+    styleUrls: ["productForm.component.css"]
 })
 export class ProductFormComponent {
 
     newProduct: Product = new Product();
-    
+
     @Output("paNewProduct")
     newProductEvent = new EventEmitter<Product>();
 
