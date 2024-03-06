@@ -20,6 +20,7 @@ import { registerLocaleData } from '@angular/common';
 import { PaDiscountDisplayComponent } from './discountDisplay.component';
 import { PaDiscountEditorComponent } from './discountEditor.component';
 import { DiscountService } from './discount.service';
+import { PaDiscountPipe } from './discount.pipe';
 registerLocaleData(localeFr);
 
 
@@ -38,7 +39,8 @@ registerLocaleData(localeFr);
     PaAddTaxPipe,
     PaCategoryFilterPipe,
     PaDiscountDisplayComponent,
-    PaDiscountEditorComponent
+    PaDiscountEditorComponent,
+    PaDiscountPipe
   ],
   imports: [
     BrowserModule,
