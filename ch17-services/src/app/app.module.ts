@@ -17,6 +17,8 @@ import { PaCategoryFilterPipe } from './categoryFilter.pipe';
 import { LOCALE_ID } from "@angular/core";
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import { PaDiscountDisplayComponent } from './discountDisplay.component';
+import { PaDiscountEditorComponent } from './discountEditor.component';
 registerLocaleData(localeFr);
 
 
@@ -33,7 +35,9 @@ registerLocaleData(localeFr);
     ProductFormComponent,
     PaToggleView,
     PaAddTaxPipe,
-    PaCategoryFilterPipe
+    PaCategoryFilterPipe,
+    PaDiscountDisplayComponent,
+    PaDiscountEditorComponent
   ],
   imports: [
     BrowserModule,
