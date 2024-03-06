@@ -9,8 +9,7 @@ import { DiscountService } from "./discount.service";
 })
 export class ProductTableComponent {
 
-    @Input("model")
-    dataModel: Model | undefined;
+    constructor(private dataModel: Model) { }
 
     getProduct(key: number): Product | undefined {
         return this.dataModel?.getProduct(key);

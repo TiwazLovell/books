@@ -1,8 +1,10 @@
 <div class="container-fluid angularApp">
     <div class="row p-2">
         <div class="col-4 p-2 text-dark">
-            <pa-productform (paNewProduct)="addProduct($event)"></pa-productform>
+            <pa-productform></pa-productform>
         </div>
-        <paProductTable [model]="model"></paProductTable>
+        <div class="col p-2">
+            <paProductTable></paProductTable>
+        </div>
     </div>
 </div>
