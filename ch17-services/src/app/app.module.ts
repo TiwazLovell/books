@@ -22,6 +22,8 @@ import { PaDiscountEditorComponent } from './discountEditor.component';
 import { DiscountService } from './discount.service';
 import { PaDiscountPipe } from './discount.pipe';
 import { PaDiscountAmountDirective } from './discountAmount.directive';
+import { SimpleDataSource } from './datasource.model';
+import { Model } from './repository.mode';
 registerLocaleData(localeFr);
 
 
@@ -48,7 +50,7 @@ registerLocaleData(localeFr);
     BrowserModule,
     FormsModule
   ],
-  providers: [DiscountService],
+  providers: [DiscountService, SimpleDataSource, Model],
   bootstrap: [ProductComponent]
 })
 export class AppModule { }
