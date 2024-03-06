@@ -9,8 +9,6 @@ import { DiscountService } from "./discount.service";
 })
 export class ProductTableComponent {
 
-    discounter: DiscountService = new DiscountService();
-
     @Input("model")
     dataModel: Model | undefined;
 

@@ -8,7 +8,6 @@ The discount is {{discounter?.discount }}
 </div>`
 })
 export class PaDiscountDisplayComponent {
-    
-    @Input("discounter")
-    discounter?: DiscountService;
+
+    constructor(public discounter: DiscountService) { }
 }

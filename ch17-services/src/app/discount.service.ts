@@ -1,3 +1,6 @@
+import { Injectable } from "@angular/core";
+
+@Injectable()
 export class DiscountService {
 
     private discountValue: number = 10;
@@ -7,7 +10,7 @@ export class DiscountService {
     }
 
     public set discount(newValue: number) {
-        this.discountValue = newValue ?? 0;
+        this.discountValue = newValue || 0;
     }
 
     public applyDiscount(price: number) {

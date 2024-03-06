@@ -19,6 +19,7 @@ import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 import { PaDiscountDisplayComponent } from './discountDisplay.component';
 import { PaDiscountEditorComponent } from './discountEditor.component';
+import { DiscountService } from './discount.service';
 registerLocaleData(localeFr);
 
 
@@ -43,6 +44,7 @@ registerLocaleData(localeFr);
     BrowserModule,
     FormsModule
   ],
+  providers: [DiscountService],
   bootstrap: [ProductComponent]
 })
 export class AppModule { }
